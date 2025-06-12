@@ -125,7 +125,7 @@ curl -s https://fluxcd.io/install.sh | sudo bash
 ```bash
 flux bootstrap github \
   --owner=felipecezaar \
-  --repository=hello-world-tupiniquin \
+  --repository=devopsgram-gitops \
   --branch=main \
   --path=clusters/devopsgram-gitops \
   --read-write-key=true \
