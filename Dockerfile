@@ -24,7 +24,7 @@ RUN pip install -r requirements.txt
 USER 1001
 
 # Expor a porta 5000 que Flask usa por padrão
-EXPOSE 5000
+EXPOSE 5005
 
 # Comando para executar a aplicação Flask
 CMD ["python3", "app.py"]
