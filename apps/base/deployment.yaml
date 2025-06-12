@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devopsgram-gitops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devopsgram-gitops
+  template:
+    metadata:
+      labels:
+        app: devopsgram-gitops
+    spec:
+      containers:
+      - name: devopsgram-gitops
+        image: felipeacezar/devopsgram-gitops:latest
+        ports:
+        - containerPort: 5000

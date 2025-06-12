@@ -120,7 +120,7 @@ curl -s https://fluxcd.io/install.sh | sudo bash
 
 - Kubernetes cluster running
 
-### Bootstrap FluxCD (one-time setup)
+### Bootstrap FluxCD Example (one-time setup)
 
 ```bash
 flux bootstrap github \

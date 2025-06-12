@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devopsgram-gitops
+spec:
+  selector:
+    app: devopsgram-gitops
+  ports:
+    - protocol: TCP
+      port: 5005
+      targetPort: 5005
+  type: LoadBalancer
