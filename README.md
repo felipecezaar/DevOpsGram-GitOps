@@ -168,7 +168,8 @@ DevOpsGram-GitOps/
 ├── .github/
 │   ├── pull_request_template.md
 │   └── workflows/
-│       └── ci-workflow.yml
+│       ├── ci-workflow.yml
+│       └── new-app-tag-workflow.yml
 ├── apps/base/
 │   ├── deployment.yaml
 │   ├── kustomization.yaml
