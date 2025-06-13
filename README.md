@@ -86,7 +86,7 @@ pip install -r requirements.txt
 flask run
 ```
 
-Access: [http://localhost:5000](http://localhost:5000)
+Access: [http://localhost:5005](http://localhost:5005)
 
 ---
 
@@ -141,7 +141,7 @@ clusters/devopsgram-gitops/
 │   ├── gotk-components.yaml
 │   ├── gotk-sync.yaml
 │   └── kustomization.yaml
-├── apps-devopsgram-gitops.yaml    # File Kustomization Config App
+└── apps-devopsgram-gitops.yaml    # File Kustomization Config App
 ```
 
 ### Synchronization
@@ -168,7 +168,7 @@ DevOpsGram-GitOps/
 ├── .github/
 │   ├── pull_request_template.md
 │   └── workflows/
-│       └── build-test.yml
+│       └── ci-workflow.yml
 ├── apps/base/
 │   ├── deployment.yaml
 │   ├── kustomization.yaml
