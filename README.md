@@ -141,7 +141,7 @@ clusters/devopsgram-gitops/
 │   ├── gotk-components.yaml
 │   ├── gotk-sync.yaml
 │   └── kustomization.yaml
-├── apps-devopsgram-gitops.yaml    # File Kustomization Config App
+└── apps-devopsgram-gitops.yaml    # File Kustomization Config App
 ```
 
 ### Synchronization
@@ -168,7 +168,7 @@ DevOpsGram-GitOps/
 ├── .github/
 │   ├── pull_request_template.md
 │   └── workflows/
-│       └── build-test.yml
+│       └── ci-workflow.yml
 ├── apps/base/
 │   ├── deployment.yaml
 │   ├── kustomization.yaml
