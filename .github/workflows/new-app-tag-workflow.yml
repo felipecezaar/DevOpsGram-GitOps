@@ -1,0 +1,29 @@
+name: New App Tag Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      new_tag:
+        description: 'New Application Tag'
+        required: true
+        type: string
+
+jobs:
+  update_manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Update deployment.yaml with new tag
+        run: |
+          sed -i "s|image: felipeacezar/devopsgram-gitops:.*|image: felipeacezar/devopsgram-gitops:${{ inputs.new_tag }}|" ./apps/base/deployment.yaml
+          git add ./apps/base/deployment.yaml
+          git commit -m "Update image tag to ${{ inputs.new_tag }} [ci skip]" || echo "No changes"
+          git push
