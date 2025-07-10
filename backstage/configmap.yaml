@@ -13,9 +13,26 @@ data:
       baseUrl: http://localhost:7007
       listen:
         port: 7007
+      cors:
+        origin: ["http://localhost:3000", "http://localhost:7007"]
+        methods: ["GET", "POST", "PUT", "DELETE"]
+        credentials: true
       database:
         client: better-sqlite3
         connection: ':memory:'
+
+    auth:
+      environment: development
+      providers:
+        guest:
+          enabled: true
+          allowAutoSignUp: true
+
+    permission:
+      enabled: true
+      policies:
+        - plugin: catalog
+          policy: "entity.metadata.namespace == 'default'"
 
     catalog:
       locations:
@@ -32,4 +49,3 @@ data:
     integrations:
       github:
         - host: github.com
-          # Configuração para repositórios públicos
