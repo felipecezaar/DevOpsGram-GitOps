@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backstage-config-production
+  namespace: backstage
+data:
+  app-config.production.yaml: |
+    # vazio para evitar uso do arquivo padrão que tenta conectar no Postgres

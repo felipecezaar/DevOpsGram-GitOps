@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backstage-config
+  namespace: backstage
+data:
+  app-config.yaml: |
+    app:
+      title: Wozcorp Backstage Platform
+      baseUrl: http://localhost:7007
+
+    backend:
+      baseUrl: http://localhost:7007
+      listen:
+        port: 7007
+      database:
+        client: better-sqlite3
+        connection: ':memory:'
+
+    techdocs:
+      builder: 'local'
+      generator:
+        runIn: 'local'
+
+    integrations:
+      github:
+        - host: github.com
