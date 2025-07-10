@@ -22,25 +22,7 @@ spec:
             - name: config
               mountPath: /app/app-config.yaml
               subPath: app-config.yaml
-            - name: config-production
-              mountPath: /app/app-config.production.yaml
-              subPath: app-config.production.yaml
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 7007
-            initialDelaySeconds: 10
-            periodSeconds: 10
-          livenessProbe:
-            httpGet:
-              path: /
-              port: 7007
-            initialDelaySeconds: 30
-            periodSeconds: 30
       volumes:
         - name: config
           configMap:
             name: backstage-config
-        - name: config-production
-          configMap:
-            name: backstage-config-production
