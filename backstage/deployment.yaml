@@ -22,9 +22,6 @@ spec:
             - name: config
               mountPath: /app/app-config.yaml
               subPath: app-config.yaml
-            - name: config-production
-              mountPath: /app/app-config.production.yaml
-              subPath: app-config.production.yaml
           readinessProbe:
             httpGet:
               path: /
@@ -41,6 +38,3 @@ spec:
         - name: config
           configMap:
             name: backstage-config
-        - name: config-production
-          configMap:
-            name: backstage-config-production

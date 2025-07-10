@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: devopsgram-platform
+  description: Wozcorp Backstage Platform
+  tags:
+    - backstage
+    - platform
+    - devops
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: felipecezaar/DevOpsGram-GitOps
+spec:
+  type: service
+  lifecycle: experimental
+  owner: platform-team
+  system: devopsgram-system

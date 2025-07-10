@@ -17,6 +17,13 @@ data:
         client: better-sqlite3
         connection: ':memory:'
 
+    catalog:
+      locations:
+        - type: url
+          target: https://raw.githubusercontent.com/felipecezaar/DevOpsGram-GitOps/feature/backstage/backstage/catalog-info.yaml
+          rules:
+            - allow: [Component, System, API, Resource, Template]
+
     techdocs:
       builder: 'local'
       generator:
@@ -25,3 +32,4 @@ data:
     integrations:
       github:
         - host: github.com
+          # Configuração para repositórios públicos
